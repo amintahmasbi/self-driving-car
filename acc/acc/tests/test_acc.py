@@ -172,8 +172,8 @@ testdata = zip(maneuvers, expected)
 
 
 @pytest.mark.parametrize("maneuver,score", testdata, ids=[m.title for m in maneuvers])
-def test_maneuvers(maneuver, score):
-    verbosity = pytest.config.getoption('verbose')
+def test_maneuvers(maneuver, score, pytestconfig):
+    verbosity = pytestconfig.getoption('verbose')
     plot = False
     animate = False
     if verbosity > 4:
