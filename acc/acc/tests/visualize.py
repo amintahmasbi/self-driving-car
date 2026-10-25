@@ -64,10 +64,10 @@ class Visualizer(object):
         ax1ss.spines['right'].set_position(('axes', 1.15))
         ax1s.set_frame_on(True)
         ax1s.patch.set_visible(False)
-        ax1s.yaxis.set_major_formatter(mpl.ticker.OldScalarFormatter())
+        ax1s.yaxis.set_major_formatter(mpl.ticker.ScalarFormatter(useOffset=False))
         ax1ss.set_frame_on(True)
         ax1ss.patch.set_visible(False)
-        ax1ss.yaxis.set_major_formatter(mpl.ticker.OldScalarFormatter())
+        ax1ss.yaxis.set_major_formatter(mpl.ticker.ScalarFormatter(useOffset=False))
 
         # set t-limits
         ax1.set_xlim(0, 5.0)
